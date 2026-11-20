@@ -43,7 +43,7 @@ E ≈ -0.556 m(几何单位) = -6.7×10^43 J = 7.5×10^26 kg  ≈ 0.39 个木星
 ```bash
 uv venv .venv && uv pip install --python .venv/Scripts/python.exe numpy matplotlib
 .venv/Scripts/python.exe -m unittest discover -s tests -v   # 10 项验证
-.venv/Scripts/python.exe scripts/audit.py                   # 三张表 + 两张图 + CSV
+.venv/Scripts/python.exe scripts/audit.py                   # 四张表 + 两张图 + CSV
 ```
 
 输出：`data/energy_audit.csv`、`figs/rho_axis.png`、`figs/energy_curves.png`。
@@ -60,6 +60,9 @@ warpdrive/
 scripts/audit.py  审计表与作图
 tests/            与闭式解对拍、v² 标度、网格收敛阶、单位换算
 docs/             设计、计划、开放问题
+REFERENCES.md     文献清单 + 断言→来源映射 + BibTeX（与 README 同级）
+LICENSE           MIT
+CITATION.cff      供 GitHub「Cite this repository」按钮使用
 ```
 
 ## 4. 物理基线（详见 `docs/01-design.md`）
@@ -87,14 +90,13 @@ E    = ∫ρ_E d³x = -(v²/12) ∫ f'(r)² r² dr        ← 角向因子 <(y²
 | 收敛阶 | 121³ → 241³ | 观测阶 > 3（四阶差分） |
 | 标度律 | E(v) / E(R) | E ∝ v²，固定壁厚比时 E ∝ R |
 
-## 6. 引用
+## 6. 参考文献
 
-- M. Alcubierre, *The warp drive: hyper-fast travel within general relativity*, Class. Quantum Grav. 11 (1994) L73, arXiv:gr-qc/0009013
-- M. J. Pfenning, L. H. Ford, *The unphysical nature of "Warp Drive"*, Class. Quantum Grav. 14 (1997) 1743, arXiv:gr-qc/9702026
-- C. Van Den Broeck, *A "warp drive" with more reasonable total energy requirements*, arXiv:gr-qc/9905084
-- J. Natário, *Warp drive with zero expansion*, arXiv:gr-qc/0110086
-- E. W. Lentz, *Breaking the Warp Barrier: Hyper-Fast Solitons in Einstein-Maxwell-Plasma Theory*, arXiv:2006.07125
-- J. Santiago, S. Schuster, M. Visser, *Generic warp drives violate the null energy condition*, arXiv:2105.03079
+完整清单、**断言→来源映射表**、可直接粘贴的 BibTeX 都在 [REFERENCES.md](REFERENCES.md)。
+收录标准：能打开 arXiv abs 页核对到标题与作者，且与仓库里某条断言直接相关。
+
+需要事先说清的一条分界：文献给的是度规形式、解析式与定性结论；
+**一切具体数字（表格、CSV、图）都是本仓库算的**，引用时请标为本文计算。
 
 ## 7. 边界声明
 
@@ -102,3 +104,23 @@ E    = ∫ρ_E d³x = -(v²/12) ∫ f'(r)² r² dr        ← 角向因子 <(y²
 非平切片方案（Bobrick–Martire 型"physical warp drive"）、柱对称 Lentz 孤子需要扩展 3-Ricci 项，
 排在 `docs/02-plan.md` 的 Phase 1。所有数字都是 G=c=1 几何单位下的经典广义相对论结果，
 不含量子场论修正；QI 相关的数字来自"把壁厚设成给定值"的反推，不是自洽求解。
+
+## 8. 版权与引用
+
+© 2026 zdltvxq。代码与文档均以 **MIT** 许可证发布，全文见 [LICENSE](LICENSE)。
+
+引用本仓库（完整 BibTeX 见 `REFERENCES.md` §3）：
+
+```bibtex
+@misc{warpdrive2026repo,
+  author = {{zdltvxq}},
+  title  = {warp-drive: Warp Engine -- a computable feasibility audit of an Alcubierre drive},
+  year   = {2026},
+  howpublished = {\url{https://github.com/zdltvxq/warp-drive}},
+  note   = {Version 0.1.0}
+}
+```
+
+GitHub 侧边栏的「Cite this repository」按钮由 `CITATION.cff` 提供，内容与此一致。
+引用本仓库中的具体数字时，请注明"由本仓库计算"，并按其来源文献在 `REFERENCES.md`
+的映射表中标注——文献没有这些数，别把我们的计算记到他们头上。

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use or cite this work, use the metadata below."
+type: software
+title: "warp-drive: Warp Engine — a computable feasibility audit of an Alcubierre warp drive"
+abstract: >-
+  A flat-slice 3+1 ADM solver for Alcubierre-type warp metrics, validated
+  point-by-point against Alcubierre's 1994 closed-form energy density, plus a
+  design-space sweep over payload radius, vehicle envelope and cruise speed that
+  reports the cheapest admissible warp bubble and the wall thickness the quantum
+  inequality forces. Every number in the documents is reproducible from
+  scripts/audit.py.
+authors:
+  - name: "zdltvxq"
+version: "0.1.0"
+date-released: "2026-11-20"
+url: "https://github.com/zdltvxq/warp-drive"
+repository-code: "https://github.com/zdltvxq/warp-drive"
+license: MIT
+keywords:
+  - alcubierre
+  - warp-drive
+  - general-relativity
+  - numerical-relativity
+  - adm-formalism
+  - exotic-matter
+  - quantum-inequality
+  - feasibility-study
