@@ -1,5 +1,15 @@
 # warp-drive — 曲率引擎（Warp Engine）设计与实施计划
 
+**English abstract.** A computable feasibility audit of an Alcubierre-type warp drive (曲率引擎).
+The repo contains a flat-slice 3+1 ADM solver validated point-by-point against Alcubierre's 1994
+closed form (eq. 18), a design-space sweep over payload radius × vehicle envelope × cruise speed,
+an energy budget in geometric units, and the quantum-inequality wall that decides the whole
+program. Every number in the documents is reproducible from `scripts/audit.py`.
+
+**Keywords / Topics:** Alcubierre warp drive, warp engine, general relativity, 3+1 ADM formalism,
+numerical relativity, exotic matter, negative energy density, quantum inequality,
+faster-than-light travel, computational physics, spacetime curvature, feasibility study.
+
 把「曲率引擎」当成一个工程问题来拆：先把它写成可计算的东西，再让数字告诉我们它卡在哪。
 
 本仓库不承诺造出飞船。它承诺三件事：
