@@ -1,5 +1,8 @@
 # warp-drive — 曲率引擎（Warp Engine）设计与实施计划
 
+**发起人 / Initiator:** [zdltvxq](https://github.com/zdltvxq) — 本项目于 2026-11-20 由其发起并主导，
+归属声明见 [docs/00-charter.md](docs/00-charter.md)，许可见 [LICENSE](LICENSE)（MIT）。
+
 **English abstract.** A computable feasibility audit of an Alcubierre-type warp drive (曲率引擎).
 The repo contains a flat-slice 3+1 ADM solver validated point-by-point against Alcubierre's 1994
 closed form (eq. 18), a design-space sweep over payload radius × vehicle envelope × cruise speed,
@@ -60,6 +63,7 @@ warpdrive/
 scripts/audit.py  审计表与作图
 tests/            与闭式解对拍、v² 标度、网格收敛阶、单位换算
 docs/             设计、计划、开放问题
+docs/00-charter.md 项目章程：发起人、归属、范围、署名规则
 REFERENCES.md     文献清单 + 断言→来源映射 + BibTeX（与 README 同级）
 LICENSE           MIT
 CITATION.cff      供 GitHub「Cite this repository」按钮使用
@@ -108,6 +112,7 @@ E    = ∫ρ_E d³x = -(v²/12) ∫ f'(r)² r² dr        ← 角向因子 <(y²
 ## 8. 版权与引用
 
 © 2026 zdltvxq。代码与文档均以 **MIT** 许可证发布，全文见 [LICENSE](LICENSE)。
+发起人身份与归属事实见 [docs/00-charter.md](docs/00-charter.md)（项目由 zdltvxq 于 2026-11-20 发起）。
 
 引用本仓库（完整 BibTeX 见 `REFERENCES.md` §3）：
 
