@@ -1,14 +1,12 @@
 cff-version: 1.2.0
-message: "If you use or cite this work, use the metadata below."
+message: "Use the metadata below to cite this repository."
 type: software
 title: "warp-drive: Warp Engine — a computable feasibility audit of an Alcubierre warp drive"
 abstract: >-
-  A flat-slice 3+1 ADM solver for Alcubierre-type warp metrics, validated
-  point-by-point against Alcubierre's 1994 closed-form energy density, plus a
-  design-space sweep over payload radius, vehicle envelope and cruise speed that
-  reports the cheapest admissible warp bubble and the wall thickness the quantum
-  inequality forces. Every number in the documents is reproducible from
-  scripts/audit.py.
+  A flat-slice 3+1 ADM solver checked against the energy density in Alcubierre
+  (1994, eq. 18). The audit computes the total Eulerian energy for several wall
+  profiles, bubble sizes, and speeds. It also estimates the energy for specified
+  Planck-scale wall thicknesses motivated by the work of Pfenning and Ford.
 authors:
   - name: "zdltvxq"
 version: "0.1.0"
